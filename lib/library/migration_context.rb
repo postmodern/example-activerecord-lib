@@ -6,7 +6,7 @@ module Library
     MIGRATIONS_DIR = File.join(__dir__,'migrations')
 
     def initialize
-      super(MIGRATIONS_DIR,SchemaMigration)
+      super(MIGRATIONS_DIR,Library::SchemaMigration)
     end
 
   end
