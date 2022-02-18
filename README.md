@@ -18,8 +18,13 @@ $ irb -r bundler/setup -Ilib -r library
 >> exit
 $ sqlite3 database.sqlite3
 sqlite> .tables
-ar_internal_metadata   library_authors_books  schema_migrations    
-library_authors        library_books        
+ar_internal_metadata       library_books            
+library_authors            library_schema_migrations
+library_authors_books    
+sqlite> SELECT * FROM library_schema_migrations;
+1
+2
+3
 sqlite> SELECT * FROM library_authors;
 1|Neil Stephenson
 sqlite> SELECT * FROM library_books;
