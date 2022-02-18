@@ -17,6 +17,9 @@ $ irb -r bundler/setup -Ilib -r library
 => #<Library::Book:0x000055d29dbb5d08 id: 1, title: "Snowcrash">
 >> exit
 $ sqlite3 database.sqlite3
+sqlite> .tables
+ar_internal_metadata   library_authors_books  schema_migrations    
+library_authors        library_books        
 sqlite> SELECT * FROM library_authors;
 1|Neil Stephenson
 sqlite> SELECT * FROM library_books;
