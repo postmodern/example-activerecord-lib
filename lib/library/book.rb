@@ -7,7 +7,9 @@ module Library
     validates :title, presence: true,
                       uniqueness: true
 
-    has_and_belongs_to_many :authors
+    has_many :book_authors
+    has_many :authors, through:    :book_authors,
+                       inverse_of: :books
 
   end
 end

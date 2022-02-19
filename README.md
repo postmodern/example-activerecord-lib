@@ -10,7 +10,9 @@ $ bundle install
 ...
 $ irb -r bundler/setup -Ilib -r library
 >> Library.connect
-[Library::Author(id: integer, name: string), Library::Book(id: integer, title: string)]
+[Library::Author(id: integer, name: string),
+ Library::Book(id: integer, title: string),
+ Library::BookAuthor(id: integer, author_id: integer, book_id: integer)]
 >> author = Library::Author.create(name: 'Neal Stephenson')
 => #<Library::Author:0x000055d29e80e168 id: 1, name: "Neal Stephenson">
 >> author.books.create(title: 'Snowcrash')
@@ -20,7 +22,7 @@ $ sqlite3 database.sqlite3
 sqlite> .tables
 ar_internal_metadata       library_books            
 library_authors            library_schema_migrations
-library_authors_books    
+library_book_authors     
 sqlite> SELECT * FROM library_schema_migrations;
 1
 2
