@@ -1,7 +1,7 @@
 module Library
   class Author < ActiveRecord::Base
 
-    self.table_name = 'library_authors'
+    self.table_name_prefix = 'library_'
 
     attribute :name, :string
     validates :name, presence: true,

@@ -1,7 +1,7 @@
 module Library
   class Book < ActiveRecord::Base
 
-    self.table_name = 'library_books'
+    self.table_name_prefix = 'library_'
 
     attribute :title, :string
     validates :title, presence: true,
