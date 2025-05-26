@@ -2,7 +2,6 @@ require 'active_record'
 
 module Library
   module Migrations
-    # The path to the `migrations/` directory.
     DIR = File.join(__dir__,'migrations')
 
     def self.context
